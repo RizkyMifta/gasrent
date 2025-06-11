@@ -41,7 +41,7 @@
             padding: 20px 0;
         }
         
-        .logo {
+        .logo-text {
             font-size: 24px;
             font-weight: bold;
             color: #000;
@@ -60,6 +60,23 @@
             text-decoration: none;
             color: #333;
             font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #000;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
         }
         
         .nav-links a:hover {
@@ -133,8 +150,8 @@
         
         .about-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             gap: 40px;
         }
         
@@ -153,6 +170,7 @@
         
         .about-content {
             max-width: 800px;
+            text-align: center;
         }
         
         .about h2 {
@@ -162,6 +180,7 @@
             text-align: center;
             position: relative;
             display: inline-block;
+            width: 100%;
         }
         
         .about h2:after {
@@ -448,23 +467,13 @@
             }
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XXFYLH1VB"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-7XXFYLH1VB');
-    </script>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <nav>
-               <div class="logo">GASRENT.JOGJA</div>
-                </div>
+                <div class="logo-text">GasRent</div>
                 <ul class="nav-links">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
@@ -606,7 +615,7 @@
                     </div>
                 </div>
                 <div class="signup-form">
-                    <h3>Daftar Sekarang</h3>
+                    <h3>Sewa Sekarang</h3>
                     <form>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -616,7 +625,7 @@
                             <label for="password">Password</label>
                             <input type="password" id="password" required>
                         </div>
-                        <button type="submit" class="signup-button">Daftar Sekarang</button>
+                        <button type="submit" class="signup-button">Sewa Sekarang</button>
                     </form>
                 </div>
             </div>
